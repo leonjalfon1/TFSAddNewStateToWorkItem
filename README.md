@@ -43,9 +43,13 @@ To use the tool, just build it, open the cmd and run it:
 <b>{category}</b>: In which category the states should be added in the ProcessConfig  
    
 <b>{stateType}</b>: Attribute "value" for the element State in the ProcessConfig (Proposed,In Progress,Completed)  
- 
+   
+.     
+
 <b>For Example:</b>
  AddNewStateToWorkItem "Domain\UserName", "Password", "http://TfsUrl:8080/tfs/DefaultCollection", "*", "Bug", "Open", "from:New(default,reason1,reason2);to:Active(defaultreason,reason4)", "In Progress"
+   
+<b>Note:</b> The tool trusts you so doesn't do any validation (Only counts the number of parameters)
 
 #Build
 To build the application just open the solution in visual studio, make sure the references are not broken and build it.  
