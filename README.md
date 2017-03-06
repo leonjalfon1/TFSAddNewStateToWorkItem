@@ -20,7 +20,8 @@ TFSAddNewStateToWorkItem perform the following steps for each specified team pro
 To use the tool, just build it, open the cmd and run it:  
 
 <b>AddNewStateToWorkItem</b> {user} {password} {collectionUrl} {teamProjects} {workItem} {newState} {transitions} {category} {stateType}    
-  
+ .  
+   
 <b>{user}</b>: "Domain\UserName" 
    
 <b>{password}</b>: "Password"  
