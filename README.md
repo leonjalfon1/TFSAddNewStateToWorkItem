@@ -19,19 +19,33 @@ TFSAddNewStateToWorkItem perform the following steps for each specified team pro
 #Getting Started
 To use the tool, just build it, open the cmd and run it:  
 
-AddNewStateToWorkItem <user> <password> <collectionUrl> <teamProjects> <workItem> <newState> <transitions> <category> <stateType>  
-
-<user>: "Domain\UserName"
-<password>: "Password"
-<collectionUrl>: "http://TfsUrl:8080/tfs/DefaultCollection"
-<teamProjects>: Team project names separetad by ',' ("tp1,tp2,tp3") or ("*") for all
-<workItem>: Workitem Name (for example: Bug)
-<newState>: New State to add (for example: Opem)
-<transitions>: You can add several transition and several reasons to the new state using the following syntax
-<category>:
-<stateType>:
-
-<user> <password> <collectionUrl> <teamProjects> <workItem> <newState> <transition(from:State(defaultreason,reason...);to:State(defaultreason,reason...))> <category> <stateType(Proposed,In Progress,Completed>
+<b>AddNewStateToWorkItem</b> {user} {password} {collectionUrl} {teamProjects} {workItem} {newState} {transitions} {category} {stateType}    
+  
+<b>{user}</b>: "Domain\UserName" 
+   
+<b>{password}</b>: "Password"  
+   
+<b>{collectionUrl}</b>: "http://TfsUrl:8080/tfs/DefaultCollection"  
+   
+<b>{teamProjects}</b>: Team project names separetad by ',' ("tp1,tp2,tp3") or ("*") for all  
+   
+<b>{workItem}</b>: Workitem Name (for example: Bug)  
+   
+<b>{newState}</b>: New State to add (for example: Open)  
+   
+<b>{transitions}</b>: You can add several transitions and several reasons to the each transition separating them by ';'  
+--> Transition Syntax -> {direction}:{state}({reasons})  
+----> {direction}: from/to (from which state or for which state)  
+----> {state}: source state (for from) or target state (for to)  
+----> {reasons}: Several reasons can be added separating them by ',' (the first reason will be set as default reason)  
+--> For example: "from:New(Created);to:Active(Accepted,In Progress)"  
+      
+<b>{category}</b>: In which category the states should be added in the ProcessConfig  
+   
+<b>{stateType}</b>: Attribute "value" for the element State in the ProcessConfig (Proposed,In Progress,Completed)  
+ 
+<b>For Example:</b>
+ AddNewStateToWorkItem "Domain\UserName", "Password", "http://TfsUrl:8080/tfs/DefaultCollection", "*", "Bug", "Open", "from:New(default,reason1,reason2);to:Active(defaultreason,reason4)", "In Progress"
 
 #Build
 To build the application just open the solution in visual studio, make sure the references are not broken and build it.  
