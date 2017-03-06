@@ -46,10 +46,11 @@ To use the tool, just build it, open the cmd and run it:
    
 .     
 
-<b>For Example:</b>
+<b>Example:</b>  
  AddNewStateToWorkItem "Domain\UserName", "Password", "http://TfsUrl:8080/tfs/DefaultCollection", "*", "Bug", "Open", "from:New(default,reason1,reason2);to:Active(defaultreason,reason4)", "In Progress"
    
-<b>Note:</b> The tool trusts you so doesn't do any validation (Only counts the number of parameters)
+<b>Note:</b>  
+The tool trusts you so doesn't do any validation (Only counts the number of parameters)
 
 #Build
 To build the application just open the solution in visual studio, make sure the references are not broken and build it.  
