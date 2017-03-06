@@ -19,7 +19,7 @@ TFSAddNewStateToWorkItem perform the following steps for each specified team pro
 #Getting Started
 To use the tool, just build it, open the cmd and run it:  
 
-<b>AddNewStateToWorkItem</b> {user} {password} {collectionUrl} {teamProjects} {workItem} {newState} {transitions} {category} {stateType}    
+<b>AddNewStateToWorkItem</b> {user} {password} {collectionUrl} {teamProjects} {workItem} {state} {transitions} {category} {stateType}    
  .  
    
 <b>{user}</b>: "Domain\UserName" 
@@ -32,7 +32,7 @@ To use the tool, just build it, open the cmd and run it:
    
 <b>{workItem}</b>: Workitem Name (for example: Bug)  
    
-<b>{newState}</b>: New State to add (for example: Open)  
+<b>{state}</b>: New State to add (for example: Open)  
    
 <b>{transitions}</b>: You can add several transitions and several reasons to the each transition separating them by ';'  
 --> Transition Syntax -> {direction}:{state}({reasons})  
